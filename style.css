@@ -1,47 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<title>Frontend Mentor | Single Price Grid Component</title>
-</head>
-<body>
-<div class="container">
-  <div class="main">
-    <h1 class="mainheader">Join our community</h1>
-    <h2 class="secheader">30-day, hassle-free money back guarantee</h2>
-    <p>Gain access to our full library of tutorials along with expert code reviews.
-      Perfect for any developers who are serious about honing their skills.</p>
-  </div>
-  <div class="section">
-    <div class="sig-back">
-      <h3 class="subheader">Monthly Subscription</h3>
-      <p class="price"><span>&dollar;29 </span>per month</p>
-      <p class="sub-price">Full access for less than &dollar;1 a day</p>
-      <button>Sign Up</button>
-    </div>
-    <div class="info-back">
-      <article class="info">
-        <h3 class="bottom-header">Why Us</h3>
-        <ul class="hotlinks">
-          <li><a href="">Tutorials by industry experts</a></li>
-          <li><a href="">Peer &amp; expert code review</a></li>
-          <li><a href="">Coding exercises</a></li>
-          <li><a href="">Access to our GitHub repos</a></li>
-          <li><a href="">Community forum</a></li>
-          <li><a href="">Flashcard decks</a></li>
-          <li><a href="">New videos every week</a></li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</div>
-<footer>
-  <p class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="mailto:hany.essam1993@gmail.com">Hany Soliman</a>. </p>
-</footer>
-</body>
-</html>
+/* CSS Document */
+body {
+	font-family: 'Karla', sans-serif;
+	background-color: #E5EFF5;
+	max-width: 1440px;
+	margin: auto;
+	padding-top: 10%;
+}
+.container {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	width: 50%;
+	margin: auto;
+}
+/* Header CSS */
+.mainheader {
+	color: hsl(179, 62%, 43%);
+	font-size: 24px;
+}
+.secheader {
+	color: hsl(71, 73%, 54%);
+	font-size: 20px;
+}
+p {
+	color: hsl(218, 22%, 67%);
+	line-height: 24px;
+}
+.main {
+	background-color: white;
+	padding: 24px 48px 24px 48px;
+	border-radius: 10px 10px 0 0;
+}
+/* Flex CSS */
+.section {
+	display: flex;
+	color: white;
+}
+.info-back, .sig-back {
+	padding: 24px 48px 24px 48px;
+}
+.sig-back {
+	background-color: hsl(179, 62%, 43%);
+	border-bottom-left-radius: 10px;
+	width: 50%;
+}
+.info-back {
+	background-color: rgba(74, 190, 189);
+	width: 50%;
+	border-bottom-right-radius: 10px;
+}
+.subheader, .bottom-header {
+	font-weight: 400;
+	font-size: 20px;
+}
+.price {
+	color: hsla(360, 100%, 100%, 0.75);
+	margin-top: 32px;
+}
+span {
+	font-size: 32px;
+	color: white;
+}
+.sub-price {
+	color: white;
+}
+button {
+	background-color: hsl(71, 73%, 54%);
+	width: 100%;
+	border-radius: 8px;
+	padding: 16px 32px 16px 32px;
+	color: white;
+	border: none;
+	font-size: 16;
+	margin-top: 18.4px;
+	box-shadow: 1px 3px 10px #2d2c2d94;
+}
+ul {
+	color: hsla(360, 100%, 100%, 0.75);
+	list-style: none;
+	padding: 0;
+	line-height: 24px;
+	font-size: 16px;
+}
+ul a {
+	text-decoration: none;
+	color: hsl(204, 43%, 93%);
+}
+/* Footer CSS */
+.attribution {
+	position: relative;
+	top: 80px;
+	bottom: 0px;
+	font-size: 11px;
+	text-align: center;
+}
+/* Links Styling */
+button:hover {
+	background-color: rgba(192, 215, 0);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	transition: 500ms;
+}
+ul a:hover {
+	background-color: rgba(192, 215, 0);
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	transition: 500ms;
+	border-radius: 5px;
+	border: 5px solid transparent;
+}
+.attribution a {
+	text-decoration: none;
+}
+.attribution a:hover {
+	color: white;
+	background-color: rgba(192, 215, 0);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	transition: 500ms;
+	border-radius: 5px;
+	border: 5px solid transparent;
+}
+@media only screen and (max-width:1145px) {
+	.container {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+	}
+	.main {
+		width: 100%;
+		align-self: center;
+	}
+	.section {
+		flex-direction: column;
+	}
+	.sig-back {
+		align-self: center;
+		border-radius: 0;
+		width: 100%;
+	}
+	.info-back {
+		align-self: center;
+		border-bottom-left-radius: 10px;
+		width: 100%;
+	}
+}
+@media only screen and (max-width:765px) {
+	.container {
+		width: 75%;
+		display: flex;
+		flex-direction: column;
+	}
+}
